@@ -4,13 +4,29 @@ body {
 }
 
 header {
-    background-color: #232f3e;
-    padding: 10px 0;
+    background-color: #131b26;
     color: #ffffff;
+    padding: 15px;
 }
 
-.fa-bars {
+section {
+    background-color: #2f3d4e;
+    padding: 10px 0;
+    color: #ffffff;
+    padding: 15px;
+}
+
+#shutcuts1 {
     display: none;
+}
+
+#bars {
+    display: none;
+}
+
+#cart {
+    margin-left: 5px;
+    font-size: 12px;
 }
 
 .navbar {
@@ -26,6 +42,10 @@ header {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.logo1 {
+    font-size: 10px;
 }
 
 .nav-links a {
@@ -64,37 +84,71 @@ header {
 .fa-cart-shopping {
     margin-right: 15px;
 }
-
+ 
+.fa-angle-right {
+    font-size: 10px;
+}
 
 @media screen and (max-width: 600px) {
-    .navbar {
-        padding: 0 10px; /* Add padding to the navbar */
+    .logo {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        position: relative;
+        left: -90px;
     }
-
+    #bars {
+        display: flex;
+    }
+    #cart {
+        display: none;
+    }
+ #shutcuts {
+    display: none;
+ }
+header {
+    background-color: #131b26;
+    color: #ffffff;
+    padding: 10px 10px 50px;
+}
+ #shutcuts1 {
+    display: flex;
+ }
+    
+.fa-location-dot {
+    position: relative;
+    margin-right: 5px;
+    font-size: 15px;
+}
+   .fa-angle-down {
+    position: relative;
+    top: 2px;
+    font-size: 10px;
+   }
     .nav-links {
-        display: none; /* Hide navigation links by default */
+        display: none;
     }
-
     .search-bar {
+        position: absolute;
+        border-radius: 90px;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex; /* To enable flex properties */
         flex-direction: row; /* Align search bar elements horizontally */
+        width: 95%;
     }
-
+    
     .search-bar input {
         flex: 1; /* Allow the input to take up remaining space */
         margin-bottom: 0; /* Remove bottom margin for input */
-    }
-
-    .user-account {
-        display: none; /* Hide user account section by default */
     }
 
     .fa-cart-shopping {
         display: none; /* Hide shopping cart icon by default */
     }
 
-    .nav-links.show,
-    .user-account.show,
-    .fa-cart-shopping.show {
-        display: flex; /* Show navigation links, user account, and shopping cart when needed */
-    }
+    
+    
 }
