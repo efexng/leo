@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #232f3e;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+.fa-bars {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+}
+
+.search-bar button {
+    background-color: #ff9900;
+    color: #232f3e;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.user-account a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.user-account a:hover {
+    text-decoration: underline;
+}
+
+.fa-cart-shopping {
+    margin-right: 15px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 0 10px; /* Add padding to the navbar */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+    }
+
+    .search-bar {
+        flex-direction: row; /* Align search bar elements horizontally */
+    }
+
+    .search-bar input {
+        flex: 1; /* Allow the input to take up remaining space */
+        margin-bottom: 0; /* Remove bottom margin for input */
+    }
+
+    .user-account {
+        display: none; /* Hide user account section by default */
+    }
+
+    .fa-cart-shopping {
+        display: none; /* Hide shopping cart icon by default */
+    }
+
+    .nav-links.show,
+    .user-account.show,
+    .fa-cart-shopping.show {
+        display: flex; /* Show navigation links, user account, and shopping cart when needed */
+    }
+}
